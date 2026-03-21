@@ -370,6 +370,126 @@ body {
     color: #666;
 }
 
+/* 预算总览 */
+.budget-overview {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #fefbf6, #f5ede0);
+}
+
+.budget-overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #8b7355;
+}
+
+.budget-note {
+    text-align: center;
+    color: #b8860b;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    background: rgba(184, 134, 11, 0.1);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.budget-table {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(139, 115, 85, 0.15);
+}
+
+.budget-header, .budget-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 1rem 1.5rem;
+    align-items: center;
+}
+
+.budget-header {
+    background: #8b7355;
+    color: white;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.budget-row {
+    border-bottom: 1px solid #f0ebe3;
+    font-size: 1rem;
+}
+
+.budget-row:last-child {
+    border-bottom: none;
+}
+
+.budget-total {
+    background: #fefbf6;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #8b7355;
+}
+
+.budget-total span:nth-child(2),
+.budget-total span:nth-child(3) {
+    color: #c0392b;
+}
+
+/* 每日实用信息卡片 */
+.day-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.info-item {
+    background: linear-gradient(135deg, #fefbf6, #f9f3ea);
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    border-left: 3px solid #8b7355;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Day3 方案切换 */
+.day-plan-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.plan-option {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    border: 2px solid #e0d5c5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.plan-option:hover {
+    border-color: #8b7355;
+}
+
+.plan-active {
+    border-color: #8b7355;
+    background: #fefbf6;
+    color: #333;
+}
+
 /* 页脚 */
 .footer {
     background: #8b7355;
@@ -406,5 +526,19 @@ body {
     
     .accommodation-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .budget-header, .budget-row {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .day-info {
+        flex-direction: column;
+    }
+    
+    .day-plan-toggle {
+        flex-direction: column;
     }
 }
