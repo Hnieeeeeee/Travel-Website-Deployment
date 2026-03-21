@@ -490,6 +490,32 @@ body {
     color: #333;
 }
 
+/* 住宿推荐细化 */
+.accommodation-note {
+    text-align: center;
+    color: #888;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.accom-subtitle {
+    font-size: 1.6rem;
+    color: #8b7355;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0d5c5;
+}
+
+.accommodation-item p a {
+    color: #8b7355;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.accommodation-item p a:hover {
+    text-decoration: underline;
+}
+
 /* 页脚 */
 .footer {
     background: #8b7355;
