@@ -25,4 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         }
     });
+    
+    // Day3 方案切换
+    const planOptions = document.querySelectorAll('.plan-option');
+    planOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            planOptions.forEach(o => o.classList.remove('plan-active'));
+            this.classList.add('plan-active');
+        });
+    });
 });
