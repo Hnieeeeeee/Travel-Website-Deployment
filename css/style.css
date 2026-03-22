@@ -370,6 +370,90 @@ body {
     color: #666;
 }
 
+/* 路线标签 */
+.route-line {
+    text-align: center;
+    color: #8b7355;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 卡片标签 */
+.card-tag {
+    display: inline-block;
+    background: rgba(139, 115, 85, 0.1);
+    color: #8b7355;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+/* 电车充电板块 */
+.ev-charging {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f0f7f0, #e8f4e8);
+}
+
+.ev-charging h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2d6a2d;
+}
+
+.ev-subtitle {
+    text-align: center;
+    color: #5a9a5a;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.ev-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.ev-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(45, 106, 45, 0.1);
+    border-top: 4px solid #4a9a4a;
+}
+
+.ev-card h3 {
+    font-size: 1.3rem;
+    color: #2d6a2d;
+    margin-bottom: 1.5rem;
+}
+
+.ev-route-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #e8f0e8;
+    font-size: 0.9rem;
+}
+
+.ev-route-item:last-child {
+    border-bottom: none;
+}
+
+.ev-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.ev-value {
+    color: #777;
+    text-align: right;
+    font-size: 0.85rem;
+}
+
 /* 预算总览 */
 .budget-overview {
     padding: 5rem 0;
