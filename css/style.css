@@ -454,7 +454,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* 预算总览 */
+/* 预算总览 - 卡片式 */
 .budget-overview {
     padding: 5rem 0;
     background: linear-gradient(135deg, #fefbf6, #f5ede0);
@@ -470,7 +470,7 @@ body {
 .budget-note {
     text-align: center;
     color: #b8860b;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 0.95rem;
     background: rgba(184, 134, 11, 0.1);
     display: inline-block;
@@ -480,48 +480,107 @@ body {
     transform: translateX(-50%);
 }
 
-.budget-table {
-    max-width: 600px;
+.budget-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 650px;
     margin: 0 auto;
+}
+
+.budget-card {
     background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(139, 115, 85, 0.15);
-}
-
-.budget-header, .budget-row {
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    padding: 1rem 1.5rem;
+    grid-template-columns: 40px 120px 1fr auto;
     align-items: center;
+    gap: 1rem;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
 }
 
-.budget-header {
-    background: #8b7355;
+.budget-card:hover {
+    transform: translateX(4px);
+}
+
+.budget-card-total {
+    background: linear-gradient(135deg, #8b7355, #a0896e);
     color: white;
-    font-weight: 700;
+    grid-template-columns: 40px 80px 1fr auto;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 16px rgba(139, 115, 85, 0.3);
+}
+
+.budget-card-total:hover {
+    transform: translateX(4px);
+}
+
+.budget-icon {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.budget-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.budget-card-total .budget-label {
+    color: rgba(255,255,255,0.95);
     font-size: 1.05rem;
 }
 
-.budget-row {
-    border-bottom: 1px solid #f0ebe3;
-    font-size: 1rem;
+.budget-bar {
+    height: 8px;
+    background: #f0ebe3;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.budget-row:last-child {
-    border-bottom: none;
+.budget-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #c9a96e, #8b7355);
+    border-radius: 4px;
+    transition: width 0.6s ease;
 }
 
-.budget-total {
-    background: #fefbf6;
+.budget-bar-total {
+    background: linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.9));
+}
+
+.budget-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.price-low {
     font-weight: 700;
-    font-size: 1.15rem;
     color: #8b7355;
 }
 
-.budget-total span:nth-child(2),
-.budget-total span:nth-child(3) {
+.price-high {
+    font-weight: 700;
     color: #c0392b;
+}
+
+.price-total {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: white;
+}
+
+.price-sep {
+    color: #ccc;
+    font-size: 0.75rem;
+}
+
+.budget-card-total .price-sep {
+    color: rgba(255,255,255,0.5);
 }
 
 /* 每日实用信息卡片 */
@@ -638,10 +697,16 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .budget-header, .budget-row {
-        grid-template-columns: 1.5fr 1fr 1fr;
-        padding: 0.8rem 1rem;
-        font-size: 0.85rem;
+    .budget-card {
+        grid-template-columns: 30px 1fr auto;
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+    .budget-bar {
+        display: none;
+    }
+    .budget-card-total {
+        grid-template-columns: 30px 1fr auto;
     }
     
     .day-info {
