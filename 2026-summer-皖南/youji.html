@@ -76,6 +76,30 @@ a:hover { text-decoration: underline; }
   gap: 16px;
   margin: 20px 0;
 }
+.photo-item {
+  margin: 0;
+}
+.photo-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  cursor: zoom-in;
+  display: block;
+}
+.photo-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.photo-caption {
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 8px;
+  font-style: italic;
+}
 .photo-slot {
   border: 2px dashed var(--border);
   border-radius: 8px;
@@ -96,20 +120,6 @@ a:hover { text-decoration: underline; }
   .photo-grid { grid-template-columns: 1fr; }
 }
 
-.photo-grid img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  cursor: zoom-in;
-  display: block;
-}
-.photo-grid img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
 
 </style>
 </head>
@@ -125,7 +135,7 @@ a:hover { text-decoration: underline; }
 
 <p>我妈在朋友圈看到一张图——<strong>汀溪那边的山景民宿照片</strong>，云雾在山腰里绕，仙气得不行。她当时就动了心思，转头跟我说"要不要去那边看看"。</p>
 
-<p>从想法到初步的攻略，其实就1~2天功夫，主要确定几件事：哪几天住哪、第二天主要玩什么、第三天的核心是哪个景点。但<strong>旅行这事，计划归计划，留点余地才能玩得舒服</strong>。</p>
+<p>从想法到初步的攻略，其实就1~2天功夫，主要确定几件事：哪几天住哪、第二天主要玩什么、第三天的核心是哪个景点。<strong>剩下的留给当天再说</strong>——自驾游最怕的不是迷路，是行程表比景点还厚。</p>
 
 <hr>
 
@@ -133,7 +143,7 @@ a:hover { text-decoration: underline; }
 
 <p>上午8点出发，从上海一路高速到泾县差不多4小时。<strong>中午直接在服务区解决的午饭</strong>，下午一点多才到月亮湾。</p>
 
-<p>月亮湾就是一片浅滩和鱼鳞坝，旺季人多得像下饺子。但无所谓，<strong>我们就是来玩水的</strong>，穿凉鞋下去踩就行了。水浅，老人下去走走也安全。</p>
+<p>月亮湾就是一片浅滩和鱼鳞坝，旺季人多得像下饺子。<strong>人多就人多吧，反正我们就是来玩水的</strong>，穿凉鞋下去踩就行。水浅，老人下去走走也安全。</p>
 
 <p>从月亮湾开15分钟到<strong>水墨汀溪风景区</strong>。这里有个细节要提醒一下：大门票¥50，但<strong>想走精华的栈道需要另外买票</strong>，别到了门口才发现。</p>
 
@@ -144,8 +154,8 @@ a:hover { text-decoration: underline; }
 <blockquote><strong>住山里的民宿，别挑豪华，挑视野</strong>。这是这趟学到的第一课。</blockquote>
 
 <div class="photo-grid">
-  <img src="images/day1-shuimo-tingxi.jpg" alt="月亮湾鱼鳞坝踩水" loading="lazy" />
-  <img src="images/day1-shuimo-sky-bridge.jpg" alt="水墨汀溪栈道或汀溪民宿晨雾" loading="lazy" />
+  <figure class="photo-item"><img src="images/day1-shuimo-tingxi.jpg" alt="月亮湾鱼鳞坝踩水" loading="lazy" /><figcaption class="photo-caption">水墨汀溪风景区</figcaption></figure>
+  <figure class="photo-item"><img src="images/day1-shuimo-sky-bridge.jpg" alt="水墨汀溪栈道或汀溪民宿晨雾" loading="lazy" /><figcaption class="photo-caption">水墨汀溪景区里的免费空中项目</figcaption></figure>
 </div>
 
 <hr>
@@ -154,7 +164,7 @@ a:hover { text-decoration: underline; }
 
 <p>第二天8点准时出发。要说皖南这趟<strong>最容易被坑的，就是桃岭六道湾的进出方向</strong>。</p>
 
-<p>我出发前查过攻略，很多博主提到<strong>西进东出</strong>。实际上，——但真正开起来就会发现，<strong>东进方向的对向车流明显更密</strong>。一路上看着对面排成长龙的车，心里默默庆幸。</p>
+<p>我出发前查过攻略，很多博主都说<strong>西进东出</strong>。一开始还半信半疑——等真开起来才知道这建议不是开玩笑的：<strong>东进方向的对向车流明显更密</strong>。一路上看着对面排成长龙的车，心里默默庆幸。</p>
 
 <p>桃岭六道湾是有几个观景台的，但<strong>车一多，停车点就显得不够用</strong>。我们本来计划停3个点，最后只在一个点停了一会，匆匆拍了几张就走了。</p>
 
@@ -175,8 +185,8 @@ a:hover { text-decoration: underline; }
 <p>晚上住<strong>方塘乡</strong>。</p>
 
 <div class="photo-grid">
-  <img src="images/day2-road-view.jpg" alt="桃岭六道湾山路风景" loading="lazy" />
-  <img src="images/day2-luoyu-shan.jpg" alt="方塘落羽杉栈道" loading="lazy" />
+  <figure class="photo-item"><img src="images/day2-road-view.jpg" alt="桃岭六道湾山路风景" loading="lazy" /><figcaption class="photo-caption">路上随手拍的风景</figcaption></figure>
+  <figure class="photo-item"><img src="images/day2-luoyu-shan.jpg" alt="方塘落羽杉栈道" loading="lazy" /><figcaption class="photo-caption">落羽衫湿地公园</figcaption></figure>
 </div>
 
 <hr>
@@ -200,8 +210,8 @@ a:hover { text-decoration: underline; }
 <p>晚上去<strong>河沥溪老街</strong>逛了一圈，离储家滩还有一段距离，老街不大，氛围一般。<strong>可去可不去，我觉得不用专门跑</strong>。</p>
 
 <div class="photo-grid">
-  <img src="images/day3-huiyun-temple.jpg" alt="惠云禅寺俯瞰青龙湾" loading="lazy" />
-  <img src="images/day3-overlook-qinglong.jpg" alt="储家滩湖景" loading="lazy" />
+  <figure class="photo-item"><img src="images/day3-huiyun-temple.jpg" alt="惠云禅寺俯瞰青龙湾" loading="lazy" /><figcaption class="photo-caption">惠云禅寺</figcaption></figure>
+  <figure class="photo-item"><img src="images/day3-overlook-qinglong.jpg" alt="储家滩湖景" loading="lazy" /><figcaption class="photo-caption">俯瞰青龙湾</figcaption></figure>
 </div>
 
 <hr>
@@ -229,8 +239,8 @@ a:hover { text-decoration: underline; }
 <p>中午吃完饭就启程回上海了。</p>
 
 <div class="photo-grid">
-  <img src="images/day4-queue.jpg" alt="西津野渡晨雾·泛舟" loading="lazy" />
-  <img src="images/day4-xijin-boat.jpg" alt="晨雾中的湖面/远山" loading="lazy" />
+  <figure class="photo-item"><img src="images/day4-queue.jpg" alt="西津野渡晨雾·泛舟" loading="lazy" /><figcaption class="photo-caption">排队情况</figcaption></figure>
+  <figure class="photo-item"><img src="images/day4-xijin-boat.jpg" alt="晨雾中的湖面/远山" loading="lazy" /><figcaption class="photo-caption">西津野渡泛舟</figcaption></figure>
 </div>
 
 <hr>
@@ -244,16 +254,6 @@ a:hover { text-decoration: underline; }
 <p><strong>第三，4天3晚有点冗余，3天2晚可能更合适。</strong> 月亮湾、板桥、方糖这几个点感觉都能砍掉</p>
 
 <p><strong>第四，季节要看你的取舍。</strong> 暑期能踩水但红杉林是绿的；11月能看红杉但不能踩水。<strong>两个各有各的好</strong>，看你更想要哪一种体验。</p>
-
-<hr>
-
-<h2>写在最后</h2>
-
-<p><strong>如果只能挑一个景点，去西津野渡看晨雾。</strong></p>
-
-<p><strong>如果只能挑一个季节，11月看红杉+春节后错峰。</strong></p>
-
-<p><strong>如果只能挑3天，砍Day1，Day2-Day4是全部。</strong></p>
 
 <hr>
 
